@@ -1,14 +1,23 @@
 @import 'tailwindcss';
 
+:root {
+	--black: #000000;
+}
+
 @font-face {
 	font-family: 'Century-Gothic';
 	src: url('../../public/fonts/CenturyGothic.ttf') format('ttf');
 }
 
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;
+}
+
+.max-width {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
 }
