@@ -16,8 +16,15 @@
 }
 
 .max-width {
-	max-width: 1440px;
+	max-width: 1920px;
 	margin: 0 auto;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+@media screen and (max-width: 720px) {
+	.max-width {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }

@@ -8,13 +8,15 @@ import React from 'react';
 
 export default function Nav() {
 	return (
-		<nav className='md:px-12 py-8'>
-			<div className='max-width flex items-center justify-between'>
+		<nav className='md:py-8 py-4'>
+			<div className='flex items-center justify-between'>
 				<div className='hidden md:flex'>
 					{navLinks.map((item, index) => {
 						return (
 							<Link
-								className={`${index === navLinks.length - 1 ? 'mr-0' : 'mr-5'}`}
+								className={`${
+									index === navLinks.length - 1 ? 'mr-0' : 'mr-5'
+								} font-normal text-sm leading-[90%] tracking-[10%] capitalize`}
 								key={index}
 								href={item.url}
 							>
