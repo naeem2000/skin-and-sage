@@ -30,12 +30,15 @@ export const Primary: Story = {
 	args: {
 		primary: true,
 		label: 'Button',
+		onClick: fn(),
+		backgroundColor: '#dc2c2c',
 	},
 };
 
 export const Secondary: Story = {
 	args: {
 		label: 'Button',
+		onClick: fn(),
 	},
 };
 
@@ -43,12 +46,14 @@ export const Large: Story = {
 	args: {
 		size: 'large',
 		label: 'Button',
+		onClick: fn(),
 	},
 };
 
-export const Small: Story = {
+export const Medium: Story = {
 	args: {
 		size: 'small',
 		label: 'Button',
+		onClick: fn(),
 	},
 };

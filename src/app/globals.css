@@ -1,12 +1,27 @@
 @import 'tailwindcss';
 
-:root {
-	--black: #000000;
+@font-face {
+	font-family: 'Century-Gothic';
+	src: url('/fonts/CenturyGothic.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Century-Gothic';
-	src: url('../../public/fonts/CenturyGothic.ttf') format('ttf');
+	font-family: 'Brown-Sugar';
+	src: url('/fonts/BrownSugar.ttf') format('truetype');
+}
+
+:root {
+	/* Colors */
+	--black: #000000;
+	--green: #2f4539;
+	--off-white: #fff2e9;
+
+	/* Fonts */
+	--brown-sugar: 'Brown-Sugar', sans-serif;
+
+	/* Backgrounds */
+	--hero-bg-desktop: url('/images/Hero-bg-desktop.png');
+	--hero-bg-mobile: url('/images/Hero-bg-mobile.png');
 }
 
 * {

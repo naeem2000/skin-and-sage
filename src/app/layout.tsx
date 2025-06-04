@@ -1,6 +1,7 @@
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import './globals.css';
+import Nav from '../stories/Nav';
 
 export const metadata: Metadata = {
 	title: 'Skin & Sage',
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${Gothic.className} antialiased`}>{children}</body>
+			<body className={`${Gothic.className} antialiased`}>
+				<Nav />
+				{children}
+			</body>
 		</html>
 	);
 }
