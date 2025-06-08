@@ -1,26 +1,73 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'Century-Gothic';
+	src: url('/fonts/CenturyGothic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Brown-Sugar';
+	src: url('/fonts/BrownSugar.ttf') format('truetype');
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	/* Colors */
+	--grey: #d9d9d9;
+	--black: #000000;
+	--green: #2f4539;
+	--off-white: #fff2e9;
+	--dark-teal: #013835;
+	--light-teal: #d8e5d1;
+	--peach: #e2915a;
+
+	/* Fonts */
+	--brown-sugar: 'Brown-Sugar', sans-serif;
+	--century-gothic: 'Century-Gothic', sans-serif;
+
+	/* Backgrounds */
+	--hero-bg-mobile: url('/images/Hero-bg-mobile.png');
+	--hero-bg-desktop: url('/images/Hero-bg-desktop.png');
+	--moment-bg: url('/images/Moment.png');
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.max-width {
+	max-width: 1920px;
+	margin: 0 auto;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media screen and (max-width: 720px) {
+	.max-width {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/* Slider buttons */
+
+.react-multiple-carousel__arrow {
+	background: none !important;
+	border: 1px solid var(--dark-teal) !important;
+	min-width: 53px !important;
+	min-height: 53px !important;
+}
+
+.react-multiple-carousel__arrow--left {
+	left: 0px !important;
+}
+
+.react-multiple-carousel__arrow--right {
+	right: 0px !important;
+}
+
+.react-multiple-carousel__arrow--left:before,
+.react-multiple-carousel__arrow--right:before {
+	color: var(--dark-teal) !important;
 }
