@@ -15,9 +15,11 @@
 	--black: #000000;
 	--green: #2f4539;
 	--off-white: #fff2e9;
+	--dark-teal: #013835;
 
 	/* Fonts */
 	--brown-sugar: 'Brown-Sugar', sans-serif;
+	--century-gothic: 'Century-Gothic', sans-serif;
 
 	/* Backgrounds */
 	--hero-bg-desktop: url('/images/Hero-bg-desktop.png');
@@ -42,4 +44,24 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+}
+
+/* Slider buttons */
+
+.react-multiple-carousel__arrow {
+	background: none !important;
+	border: 1px solid var(--dark-teal) !important;
+}
+
+.react-multiple-carousel__arrow--left {
+	left: 0px !important;
+}
+
+.react-multiple-carousel__arrow--right {
+	right: 0px !important;
+}
+
+.react-multiple-carousel__arrow--left:before,
+.react-multiple-carousel__arrow--right:before {
+	color: var(--dark-teal) !important;
 }

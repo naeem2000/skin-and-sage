@@ -13,7 +13,7 @@ export default function hero() {
 						width={570}
 						height={88}
 					/>
-					<Button className='mt-8' size='large' label='Shop Now' />
+					<Button className='mt-8' primary size='large' label='Shop Now' />
 				</div>
 			</div>
 		</section>
