@@ -28,3 +28,16 @@ export type SliderSyles = {
 	keyBoardControl: boolean;
 	itemClass: string;
 };
+
+export type SliderData = {
+	image: string | null;
+	productName: string | null;
+	price: string | null;
+}[];
+
+export type CategoryData = {
+	image: string;
+	categoryName: string;
+	categoryDescription: string;
+	categoryText: string;
+}[];

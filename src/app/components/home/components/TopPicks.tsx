@@ -1,26 +1,26 @@
+import { sliderData } from '../../functions/data';
 import { Button } from '@/stories/Button';
-import ClientSlider from '@/stories/Slider';
 import Slider from '@/stories/Slider';
+import H2 from '@/stories/H2';
 import React from 'react';
+import H3 from '@/stories/H3';
 
 export default function TopPicks() {
 	return (
 		<section className='max-width'>
-			<div className='mt-20 flex justify-center flex-col md:flex-row'>
-				<div className='w-[20%] mr-14'>
-					<h2 className="flex flex-col font-normal text-[40px] leading-[90%] tracking-[10%] capitalize text-[var(--primary)] font-['Brown-Sugar']">
-						TOP PICKS
-						<span className='mt-3.5 ml-2.5 font-normal text-lg leading-[90%] tracking-[5%] font-["Century-Gothic"] lowercase'>
-							made for you
-						</span>
-					</h2>
-					<p className='max-w-[220px] mt-10 font-normal text-lg leading-[100%] tracking-[5%]'>
+			<div className='mt-5 md:mt-20 flex justify-center flex-col lg:flex-row'>
+				<div className='flex flex-col items-center justify-center md:items-start w-full lg:w-[20%] mr-14'>
+					<div className='flex flex-col'>
+						<H2 label='TOP PICKS' className='text-center md:text-left' />
+						<H3 className='mt-3.5 ml-2.5' label='made for you' />
+					</div>
+					<p className='hidden md:block max-w-full lg:max-w-[220px] mt-10 font-normal text-lg leading-[100%] tracking-[5%]'>
 						Tried, tested, and loved, your next skin essential starts here.
 					</p>
-					<Button label='Shop now' primary className='mt-10' />
+					<Button label='Shop now' primary className='hidden md:block mt-10' />
 				</div>
-				<div className='w-[70%]'>
-					<Slider />
+				<div className='w-full mt-8 lg:w-[70%]'>
+					<Slider sliderData={sliderData} />
 				</div>
 			</div>
 		</section>

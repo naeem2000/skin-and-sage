@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs';
 import Nav from './Nav';
 
 const meta = {
-  component: Nav,
+	component: Nav,
 } satisfies Meta<typeof Nav>;
 
 export default meta;

@@ -12,18 +12,22 @@
 
 :root {
 	/* Colors */
+	--grey: #d9d9d9;
 	--black: #000000;
 	--green: #2f4539;
 	--off-white: #fff2e9;
 	--dark-teal: #013835;
+	--light-teal: #d8e5d1;
+	--peach: #e2915a;
 
 	/* Fonts */
 	--brown-sugar: 'Brown-Sugar', sans-serif;
 	--century-gothic: 'Century-Gothic', sans-serif;
 
 	/* Backgrounds */
-	--hero-bg-desktop: url('/images/Hero-bg-desktop.png');
 	--hero-bg-mobile: url('/images/Hero-bg-mobile.png');
+	--hero-bg-desktop: url('/images/Hero-bg-desktop.png');
+	--moment-bg: url('/images/Moment.png');
 }
 
 * {
@@ -51,6 +55,8 @@
 .react-multiple-carousel__arrow {
 	background: none !important;
 	border: 1px solid var(--dark-teal) !important;
+	min-width: 53px !important;
+	min-height: 53px !important;
 }
 
 .react-multiple-carousel__arrow--left {
