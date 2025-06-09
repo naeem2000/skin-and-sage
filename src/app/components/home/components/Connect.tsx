@@ -14,7 +14,7 @@ export default function Connect() {
 					className='mt-5'
 				/>
 			</div>
-			<div className='flex flex-row flex-wrap items-center justify-center'>
+			<div className='flex flex-row flex-wrap items-center justify-center mt-16'>
 				{connectRow.map((item, index) => (
 					<Card item={item} key={index} />
 				))}

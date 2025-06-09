@@ -4,6 +4,7 @@ export interface ButtonProps {
 	className?: string;
 	onClick?: () => void;
 	size?: 'medium' | 'large';
+	type?: 'button' | 'reset' | 'submit';
 }
 
 /** Primary UI component for user interaction */
@@ -13,6 +14,7 @@ export const Button = ({
 	onClick,
 	primary,
 	className,
+	type,
 }: ButtonProps) => {
 	const baseStyles: string =
 		'flex items-center justify-center cursor-pointer font-normal text-lg leading-[100%] tracking-[5%] h-[53px] rounded-[4px] hover:opacity-[0.80] transition-all duration-0.5s';
@@ -24,7 +26,7 @@ export const Button = ({
 		<button
 			className={`${baseStyles} ${className} ${mode} ${buttonSize}`}
 			onClick={onClick}
-			type='button'
+			type={type}
 		>
 			{label}
 		</button>
