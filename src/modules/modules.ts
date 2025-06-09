@@ -41,3 +41,9 @@ export type CategoryData = {
 	categoryDescription: string;
 	categoryText: string;
 }[];
+
+export type ConnectRow = {
+	image: string;
+	likes: number;
+	description: string;
+}[];

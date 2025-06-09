@@ -1,5 +1,6 @@
 import {
 	CategoryData,
+	ConnectRow,
 	NavIcons,
 	NavLinks,
 	SliderData,
@@ -139,6 +140,36 @@ export const categoryData: CategoryData = [
 		categoryName: 'Catergory Name',
 		categoryDescription: 'What is the category about ',
 		categoryText:
+			'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
+	},
+];
+
+export const connectRow: ConnectRow = [
+	{
+		image: '/images/Grey-placeholder.png',
+		likes: 100,
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
+	},
+	{
+		image: '/images/Grey-placeholder.png',
+
+		likes: 100,
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
+	},
+	{
+		image: '/images/Grey-placeholder.png',
+
+		likes: 100,
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
+	},
+	{
+		image: '/images/Grey-placeholder.png',
+
+		likes: 100,
+		description:
 			'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
 	},
 ];
