@@ -21,6 +21,7 @@
 	--light-teal: #d8e5d1;
 	--placeholder: #707070;
 	--border-color: #cfcfcf;
+	--line-color: #707070;
 
 	/* Fonts */
 	--brown-sugar: 'Brown-Sugar', sans-serif;
@@ -84,7 +85,6 @@ textarea {
 	font-size: 14px;
 	line-height: 140%;
 	letter-spacing: 0%;
-	max-width: 505px;
 	width: 100%;
 	margin-top: 15px;
 }

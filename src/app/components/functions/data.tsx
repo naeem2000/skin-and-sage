@@ -1,12 +1,15 @@
-import {
-	CategoryData,
-	ConnectRow,
-	NavIcons,
-	NavLinks,
-	SliderData,
-} from '@/modules/modules';
-import { GoHeart } from 'react-icons/go';
 import { FiShoppingBag } from 'react-icons/fi';
+import { GoHeart } from 'react-icons/go';
+import {
+	NavLinks,
+	NavIcons,
+	ConnectRow,
+	SliderData,
+	FooterLinks,
+	CategoryData,
+	SocialLinks,
+} from '@/modules/modules';
+import { BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
 export const navLinks: NavLinks = [
 	{ link: 'About', url: '#about' },
@@ -171,5 +174,27 @@ export const connectRow: ConnectRow = [
 		likes: 100,
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
+	},
+];
+
+export const footerLinks: FooterLinks = [
+	{ link: '', text: 'Home' },
+	{ link: '', text: 'Products' },
+	{ link: '', text: 'Contact Us' },
+	{ link: '', text: 'Privacy Policy' },
+];
+
+export const socialLinks: SocialLinks = [
+	{
+		link: 'https://www.instagram.com/p/DKuVXM7ogxu/?igsh=MWhhdjJhaWdhd2V6bA==',
+		icon: <BsInstagram size={20} color='white' />,
+	},
+	{
+		link: '',
+		icon: <BsFacebook size={20} color='white' />,
+	},
+	{
+		link: '',
+		icon: <BsLinkedin size={20} color='white' />,
 	},
 ];
