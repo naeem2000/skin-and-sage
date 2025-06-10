@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { IconType } from 'react-icons';
 
 export type NavLinks = {
@@ -40,4 +41,20 @@ export type CategoryData = {
 	categoryName: string;
 	categoryDescription: string;
 	categoryText: string;
+}[];
+
+export type ConnectRow = {
+	image: string;
+	likes: number;
+	description: string;
+}[];
+
+export type FooterLinks = {
+	link: string;
+	text: string;
+}[];
+
+export type SocialLinks = {
+	link: string;
+	icon: ReactNode;
 }[];
