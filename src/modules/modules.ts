@@ -58,3 +58,10 @@ export type SocialLinks = {
 	link: string;
 	icon: ReactNode;
 }[];
+
+export type AboutCards = {
+	image: string;
+	text: string;
+	width: number;
+	height: number;
+}[];
