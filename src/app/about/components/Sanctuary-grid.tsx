@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-type Props = {};
-
-export default function SanctuaryGrid({}: Props) {
+export default function SanctuaryGrid() {
 	return (
 		<section className='max-width'>
 			<div className='flex items-center justify-center mt-24 flex-col xl:flex-row'>
