@@ -31,9 +31,9 @@ export type SliderSyles = {
 };
 
 export type SliderData = {
-	image: string | null;
-	productName: string | null;
-	price: string | null;
+	image: string;
+	productName: string;
+	price: string;
 }[];
 
 export type CategoryData = {
