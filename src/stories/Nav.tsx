@@ -2,13 +2,15 @@
 
 import { navIcons, navLinks } from '../app/components/functions/data';
 import { Fade as Hamburger } from 'hamburger-react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 export default function Nav() {
+	const path = usePathname();
 	return (
-		<nav className='max-width absolute right-0 left-0 md:py-8 px-8 py-4'>
+		<nav className='max-width absolute right-0 left-0 top-0 md:py-8 px-8 py-4'>
 			<div className='flex items-center justify-between'>
 				<div className='hidden md:flex'>
 					{navLinks.map((item, index) => {
@@ -18,9 +20,9 @@ export default function Nav() {
 									index === navLinks.length - 1 ? 'mr-0' : 'mr-5'
 								} font-normal text-black text-sm leading-[90%] tracking-[10%] capitalize`}
 								key={index}
-								href={item.url}
+								href={path !== '/' && item.url === '/about' ? '/' : item.url}
 							>
-								{item.link}
+								{path !== '/' && item.link === 'About' ? 'Home' : item.link}
 							</Link>
 						);
 					})}

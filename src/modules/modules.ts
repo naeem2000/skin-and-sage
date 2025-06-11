@@ -31,9 +31,9 @@ export type SliderSyles = {
 };
 
 export type SliderData = {
-	image: string | null;
-	productName: string | null;
-	price: string | null;
+	image: string;
+	productName: string;
+	price: string;
 }[];
 
 export type CategoryData = {
@@ -57,4 +57,11 @@ export type FooterLinks = {
 export type SocialLinks = {
 	link: string;
 	icon: ReactNode;
+}[];
+
+export type AboutCards = {
+	image: string;
+	text: string;
+	width: number;
+	height: number;
 }[];

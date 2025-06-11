@@ -1,3 +1,4 @@
+import { BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import { FiShoppingBag } from 'react-icons/fi';
 import { GoHeart } from 'react-icons/go';
 import {
@@ -5,14 +6,14 @@ import {
 	NavIcons,
 	ConnectRow,
 	SliderData,
+	AboutCards,
 	FooterLinks,
-	CategoryData,
 	SocialLinks,
+	CategoryData,
 } from '@/modules/modules';
-import { BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
 export const navLinks: NavLinks = [
-	{ link: 'About', url: '#about' },
+	{ link: 'About', url: '/about' },
 	{ link: 'Shop by category', url: '#category' },
 ];
 
@@ -178,7 +179,7 @@ export const connectRow: ConnectRow = [
 ];
 
 export const footerLinks: FooterLinks = [
-	{ link: '', text: 'Home' },
+	{ link: '/', text: 'Home' },
 	{ link: '', text: 'Products' },
 	{ link: '', text: 'Contact Us' },
 	{ link: '', text: 'Privacy Policy' },
@@ -196,5 +197,32 @@ export const socialLinks: SocialLinks = [
 	{
 		link: '',
 		icon: <BsLinkedin size={20} color='white' />,
+	},
+];
+
+export const aboutCards: AboutCards = [
+	{
+		image: '/images/About-card-1.png',
+		text: 'Discover a sanctuary of advanced laser treatments and holistic aesthetics',
+		width: 85,
+		height: 108,
+	},
+	{
+		image: '/images/About-card-2.png',
+		text: 'Every service is a step in your wellness journey-safe, effective, and tailored to your unique needs.',
+		width: 66,
+		height: 98,
+	},
+	{
+		image: '/images/About-card-3.png',
+		text: 'From laser hair and tattoo removal to PICO facials, we deliver expert care and medical-grade results, all with a gentle touch.',
+		width: 102,
+		height: 96,
+	},
+	{
+		image: '/images/About-card-4.png',
+		text: 'With advanced Skin Lab training, our team brings skilled hands and personalized care to every step of your skincare journey.',
+		width: 82,
+		height: 85,
 	},
 ];

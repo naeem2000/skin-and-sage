@@ -1,8 +1,8 @@
 import { connectRow } from '../../functions/data';
-import React from 'react';
 import Card from '@/stories/Card';
 import H2 from '@/stories/H2';
 import H3 from '@/stories/H3';
+import React from 'react';
 
 export default function Connect() {
 	return (

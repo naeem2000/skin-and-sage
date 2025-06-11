@@ -1,8 +1,8 @@
 import localFont from 'next/font/local';
-import type { Metadata } from 'next';
-import './globals.css';
-import Nav from '../stories/Nav';
 import Footer from '@/stories/Footer';
+import type { Metadata } from 'next';
+import Nav from '../stories/Nav';
+import './globals.css';
 
 export const metadata: Metadata = {
 	title: 'Skin & Sage',

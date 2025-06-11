@@ -1,13 +1,14 @@
-import { connectRow } from '@/app/components/functions/data';
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import Card from './Card';
+
+import AboutCard from './About-Card';
+import { aboutCards } from '@/app/components/functions/data';
 
 const meta = {
-	component: Card,
+	component: AboutCard,
 	parameters: {
 		layout: 'centered',
 	},
-} satisfies Meta<typeof Card>;
+} satisfies Meta<typeof AboutCard>;
 
 export default meta;
 
@@ -15,6 +16,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {
-		item: connectRow[0],
+		item: aboutCards[0],
 	},
 };

@@ -2,8 +2,8 @@ import { sliderData } from '../../functions/data';
 import { Button } from '@/stories/Button';
 import Slider from '@/stories/Slider';
 import H2 from '@/stories/H2';
-import React from 'react';
 import H3 from '@/stories/H3';
+import React from 'react';
 
 export default function TopPicks() {
 	return (

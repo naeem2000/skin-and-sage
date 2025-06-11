@@ -12,7 +12,7 @@ export default function Card({ item }: Props) {
 	const [isLiked, setIsLiked] = useState<boolean>(false);
 
 	return (
-		<div className='m-2 lg:m-5 w-[155px] md:w-[318px]'>
+		<div className='m-2 w-[155px] md:w-[318px]'>
 			<Image alt='product' src={item.image} width={318} height={290} />
 			<div className='flex items-center mt-3.5'>
 				{!isLiked ? (
