@@ -180,7 +180,7 @@ export const connectRow: ConnectRow = [
 
 export const footerLinks: FooterLinks = [
 	{ link: '/', text: 'Home' },
-	{ link: '', text: 'Products' },
+	{ link: '', text: 'Links' },
 	{ link: '', text: 'Contact Us' },
 	{ link: '', text: 'Privacy Policy' },
 ];

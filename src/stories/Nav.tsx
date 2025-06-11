@@ -3,12 +3,14 @@
 import { navIcons, navLinks } from '../app/components/functions/data';
 import { Fade as Hamburger } from 'hamburger-react';
 import { usePathname } from 'next/navigation';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 export default function Nav() {
+	const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
 	const path = usePathname();
+
 	return (
 		<nav className='max-width absolute right-0 left-0 top-0 md:py-8 px-8 py-4'>
 			<div className='flex items-center justify-between'>
@@ -36,7 +38,7 @@ export default function Nav() {
 					/>
 				</Link>
 				<div className='block md:hidden'>
-					<Hamburger size={25} />
+					<Hamburger toggle={() => setIsNavOpen(!isNavOpen)} size={25} />
 				</div>
 				<div className='hidden md:flex'>
 					{navIcons.map((item, index) => {
@@ -53,6 +55,7 @@ export default function Nav() {
 					})}
 				</div>
 			</div>
+			<div className='absolute top-0 right-0 left-0 bottom-0'>awe</div>
 		</nav>
 	);
 }
