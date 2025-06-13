@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import H2 from './H2';
 
 export default function Nav() {
 	const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
@@ -20,7 +21,7 @@ export default function Nav() {
 							<Link
 								className={`${
 									index === navLinks.length - 1 ? 'mr-0' : 'mr-5'
-								} font-normal text-black text-sm leading-[90%] tracking-[10%] capitalize`}
+								} font-normal text-black text-sm leading-[90%] tracking-[10%] capitalize hover:underline`}
 								key={index}
 								href={path !== '/' && item.url === '/about' ? '/' : item.url}
 							>
@@ -29,16 +30,15 @@ export default function Nav() {
 						);
 					})}
 				</div>
-				<Link href={'#'} className='mr-32'>
-					<Image
-						src={'/images/Logo-black.png'}
-						width={139}
-						height={22}
-						alt='logo'
-					/>
+				<Link href={'/'} className='mr-32'>
+					<H2 className='!text-3xl' label='SKIN&SAGE' />
 				</Link>
 				<div className='block md:hidden'>
-					<Hamburger toggle={() => setIsNavOpen(!isNavOpen)} size={25} />
+					<Hamburger
+						toggle={() => setIsNavOpen(true)}
+						toggled={false}
+						size={25}
+					/>
 				</div>
 				<div className='hidden md:flex'>
 					{navIcons.map((item, index) => {
@@ -55,7 +55,56 @@ export default function Nav() {
 					})}
 				</div>
 			</div>
-			<div className='absolute top-0 right-0 left-0 bottom-0'>awe</div>
+			<div
+				className={`fixed top-0 right-0 left-0 bottom-0 h-full w-full bg-gray-800 z-20 px-10 py-32 block md:hidden ${
+					isNavOpen ? 'translate-x-0' : '-translate-x-[100%]'
+				} transition-all duration-300 ease-in-out`}
+			>
+				<div className='flex flex-col items-start justify-start h-full'>
+					<div className='flex items-center justify-between w-full mb-36'>
+						<Image
+							src={'/images/Logo-white.png'}
+							width={250}
+							height={100}
+							alt='logo'
+						/>
+						<Hamburger
+							toggle={() => setIsNavOpen(false)}
+							toggled={true}
+							color='white'
+							size={25}
+						/>
+					</div>
+					{navLinks.map((item, index) => {
+						return (
+							<Link
+								onClick={() => setIsNavOpen(false)}
+								className={`${
+									index === navLinks.length - 1 ? 'mb-0' : 'mb-5'
+								} font-normal text-white text-2xl leading-[90%] tracking-[10%] capitalize`}
+								key={index}
+								href={path !== '/' && item.url === '/about' ? '/' : item.url}
+							>
+								{path !== '/' && item.link === 'About' ? 'Home' : item.link}
+							</Link>
+						);
+					})}
+					<div className='flex mt-15'>
+						{navIcons.map((item, index) => {
+							const Icon = item.icon;
+							return (
+								<Link
+									key={index}
+									href={item.url}
+									className={index === navIcons.length - 1 ? 'mr-0' : 'mr-5'}
+								>
+									{Icon && <Icon color='white' size={30} />}
+								</Link>
+							);
+						})}
+					</div>
+				</div>
+			</div>
 		</nav>
 	);
 }

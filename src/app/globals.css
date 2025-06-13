@@ -60,6 +60,7 @@
 	border: 1px solid var(--dark-teal) !important;
 	min-width: 53px !important;
 	min-height: 53px !important;
+	z-index: 10 !important;
 }
 
 .react-multiple-carousel__arrow--left {

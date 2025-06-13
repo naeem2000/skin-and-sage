@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
 import { IconType } from 'react-icons';
+import { ReactNode } from 'react';
 
 export type NavLinks = {
 	link: string;

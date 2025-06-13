@@ -1,9 +1,9 @@
 import { footerLinks, socialLinks } from '@/app/components/functions/data';
 import { FaCcMastercard } from 'react-icons/fa';
 import { RiVisaLine } from 'react-icons/ri';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import H2 from './H2';
 
 export default function Footer() {
 	return (
@@ -12,12 +12,9 @@ export default function Footer() {
 				<div className='flex justify-between items-start mb-10 flex-col lg:flex-row'>
 					<div className='w-full lg:w-max'>
 						<div className='flex items-center lg:items-start justify-center flex-col mb-5 lg:mb-0'>
-							<Image
-								src={'/images/Logo-white.png'}
-								width={139}
-								height={22}
-								alt='Logo'
-							/>
+							<Link href={'/'} className='mr-32'>
+								<H2 className='!text-3xl !text-white' label='SKIN&SAGE' />
+							</Link>
 							<p className='font-normal text-sm leading-5 tracking-[0%] mt-4 text-white max-w-64'>
 								The of blend science and serenity to bring out your skin’s
 								natural radiance.

@@ -1,7 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/nextjs';
-
-import AboutCard from './About-Card';
 import { aboutCards } from '@/app/components/functions/data';
+import type { Meta, StoryObj } from '@storybook/nextjs';
+import AboutCard from './About-Card';
 
 const meta = {
 	component: AboutCard,

@@ -21,17 +21,24 @@ export default function Contact() {
 						skin’s natural radiance. Contact us today and book your appointment!
 					</p>
 					<div className='h-full flex flex-col'>
-						<input name='name' type='text' placeholder='Name' />
-						<input name='email' type='email' placeholder='Email' />
+						<input required name='name' type='text' placeholder='Name' />
+						<input required name='email' type='email' placeholder='Email' />
 						<input
+							required
 							name='contact-number'
 							type='text'
 							inputMode='numeric'
 							pattern='[0-9]*'
 							placeholder='Contact Number'
 						/>
-						<input name='service-type' type='text' placeholder='Service Type' />
+						<input
+							required
+							name='service-type'
+							type='text'
+							placeholder='Service Type'
+						/>
 						<textarea
+							required
 							name='Message'
 							id='message'
 							placeholder='Message'

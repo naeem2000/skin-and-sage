@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-
 import Nav from './Nav';
 
 const meta = {
