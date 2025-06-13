@@ -150,27 +150,27 @@ export const categoryData: CategoryData = [
 
 export const connectRow: ConnectRow = [
 	{
-		image: '/images/Grey-placeholder.png',
+		image: '/images/Card-1.jpg',
 		likes: 100,
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
 	},
 	{
-		image: '/images/Grey-placeholder.png',
+		image: '/images/Card-2.jpg',
 
 		likes: 100,
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
 	},
 	{
-		image: '/images/Grey-placeholder.png',
+		image: '/images/Card-3.jpg',
 
 		likes: 100,
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
 	},
 	{
-		image: '/images/Grey-placeholder.png',
+		image: '/images/Card-4.jpg',
 
 		likes: 100,
 		description:
@@ -180,7 +180,7 @@ export const connectRow: ConnectRow = [
 
 export const footerLinks: FooterLinks = [
 	{ link: '/', text: 'Home' },
-	{ link: '', text: 'Products' },
+	{ link: '', text: 'Links' },
 	{ link: '', text: 'Contact Us' },
 	{ link: '', text: 'Privacy Policy' },
 ];

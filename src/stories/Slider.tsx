@@ -1,11 +1,11 @@
 'use client';
 
+import { sliderStyles } from '@/app/components/functions/constants';
 import { CategoryData, SliderData } from '@/modules/modules';
 import 'react-multi-carousel/lib/styles.css';
 import Carousel from 'react-multi-carousel';
 import Image from 'next/image';
 import React from 'react';
-import { sliderStyles } from '@/app/components/functions/constants';
 
 interface SliderProps {
 	sliderData?: SliderData;

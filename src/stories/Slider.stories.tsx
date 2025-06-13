@@ -1,7 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/nextjs';
-
-import Slider from './Slider';
 import { categoryData, sliderData } from '@/app/components/functions/data';
+import type { Meta, StoryObj } from '@storybook/nextjs';
+import Slider from './Slider';
 
 const meta = {
 	component: Slider,

@@ -13,6 +13,7 @@
 :root {
 	/* Colors */
 	--grey: #d9d9d9;
+	--lime: #ecf9e5;
 	--black: #000000;
 	--green: #2f4539;
 	--peach: #e2915a;
@@ -21,8 +22,6 @@
 	--light-teal: #d8e5d1;
 	--placeholder: #707070;
 	--border-color: #cfcfcf;
-	--line-color: #707070;
-	--lime: #ecf9e5;
 
 	/* Fonts */
 	--brown-sugar: 'Brown-Sugar', sans-serif;
@@ -61,6 +60,7 @@
 	border: 1px solid var(--dark-teal) !important;
 	min-width: 53px !important;
 	min-height: 53px !important;
+	z-index: 10 !important;
 }
 
 .react-multiple-carousel__arrow--left {
