@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import H2 from './H2';
 
 export default function Nav() {
 	const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
@@ -31,7 +30,12 @@ export default function Nav() {
 					})}
 				</div>
 				<Link href={'/'} className='mr-32'>
-					<H2 className='!text-3xl' label='SKIN&SAGE' />
+					<Image
+						src={'/images/Logo-black.png'}
+						width={150}
+						height={100}
+						alt='logo'
+					/>
 				</Link>
 				<div className='block md:hidden'>
 					<Hamburger
