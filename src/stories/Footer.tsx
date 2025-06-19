@@ -1,11 +1,14 @@
+'use client';
 import { footerLinks, socialLinks } from '@/app/components/functions/data';
+import { MdOutlineKeyboardArrowUp } from 'react-icons/md';
 import { FaCcMastercard } from 'react-icons/fa';
 import { RiVisaLine } from 'react-icons/ri';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 export default function Footer() {
+	const [isExpanded, setIsExpanded] = useState<boolean>(false);
 	return (
 		<footer className='bg-[var(--green)] pt-10 pb-5 lg:pb-10 mt-28'>
 			<div className='max-width'>
@@ -77,24 +80,67 @@ export default function Footer() {
 							© 2025 SkinandSage · All Rights Reserved
 						</p>
 					</div>
-					<div className='flex items-start lg:hidden w-full flex-col mr-0 '>
-						{footerLinks
-							.filter((item) => item.text !== 'Home')
-							.map((item, index, filteredLinks) => {
-								const isLast = index === filteredLinks.length - 1;
-								return (
-									<Link
-										className={`font-normal text-sm leading-[100%] tracking-[2%] text-white w-full border-t border-[var(--placeholder)] pt-5 pb-5 ${
-											isLast ? 'border-b' : ''
-										}`}
-										key={index}
-										href={item.link}
-									>
-										{item.text}
-									</Link>
-								);
-							})}
+					<div className='flex items-start lg:hidden w-full flex-col mr-0'>
+						<div
+							onClick={() => setIsExpanded(!isExpanded)}
+							className='border-t border-[var(--placeholder)] w-full flex items-center pt-3 pb-3 justify-between'
+						>
+							<p className='font-normal text-sm leading-[100%] tracking-[2%] text-white'>
+								Links
+							</p>
+							<div
+								className={`transition duration-300 ${
+									isExpanded ? 'rotate-180' : ''
+								}`}
+							>
+								<MdOutlineKeyboardArrowUp color='#707070' size={35} />
+							</div>
+						</div>
+						<div
+							className={`overflow-hidden transition-all duration-300 ease-in-out w-full ${
+								isExpanded ? 'max-h-[200px] mb-4' : 'max-h-0'
+							}`}
+						>
+							<div className='w-full p-4'>
+								{socialLinks.map((item, index) => {
+									const icon = item.icon;
+									return (
+										<Link
+											className={
+												index === socialLinks.length - 1 ? 'mr-0' : 'mr-6'
+											}
+											key={index}
+											href={item.link}
+											target='_blank'
+										>
+											{icon}
+										</Link>
+									);
+								})}{' '}
+							</div>
+						</div>
+
+						{/* Render the list of links */}
+						<div className='flex flex-col w-full'>
+							{footerLinks
+								.filter((item) => item.text !== 'Home' && item.text !== 'Links')
+								.map((item, index, filteredLinks) => {
+									const isLast = index === filteredLinks.length - 1;
+									return (
+										<Link
+											className={`font-normal text-sm leading-[100%] tracking-[2%] text-white w-full border-t border-[var(--placeholder)] pt-5 pb-5 ${
+												isLast ? 'border-b' : ''
+											}`}
+											key={index}
+											href={item.link}
+										>
+											{item.text}
+										</Link>
+									);
+								})}
+						</div>
 					</div>
+
 					<div className='flex flex-col items-center order-1 lg:order-2'>
 						<div className='flex lg:hidden mb-5 mt-9'>
 							{socialLinks.map((item, index) => {
