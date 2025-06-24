@@ -1,4 +1,4 @@
-import { aboutCards } from '@/app/components/functions/data';
+import { aboutCards } from '@/app/functions/data';
 import AboutCard from '@/stories/About-Card';
 import { Button } from '@/stories/Button';
 import Image from 'next/image';

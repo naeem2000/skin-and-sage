@@ -1,5 +1,5 @@
-import { aboutCards } from '@/app/components/functions/data';
 import type { Meta, StoryObj } from '@storybook/nextjs';
+import { aboutCards } from '@/app/functions/data';
 import AboutCard from './About-Card';
 
 const meta = {

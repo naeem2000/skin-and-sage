@@ -1,5 +1,5 @@
-import { videoUrl } from '../components/functions/constants';
 import SanctuaryGrid from './components/Sanctuary-grid';
+import { videoUrl } from '../functions/constants';
 import VideoPlayer from '@/stories/VideoPlayer';
 import AboutHero from './components/AboutHero';
 import Services from './components/Services';

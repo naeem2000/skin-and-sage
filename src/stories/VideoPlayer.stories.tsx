@@ -1,5 +1,5 @@
-import { videoUrl } from '@/app/components/functions/constants';
 import type { Meta, StoryObj } from '@storybook/nextjs';
+import { videoUrl } from '@/app/functions/constants';
 import VideoPlayer from './VideoPlayer';
 
 const meta = {

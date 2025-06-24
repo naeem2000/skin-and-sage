@@ -40,7 +40,7 @@ export default function Services() {
 				</div>
 				<Button
 					primary
-					label='Book an appointment'
+					label='See prices'
 					size='large'
 					className='!w-[244px] mt-10'
 				/>

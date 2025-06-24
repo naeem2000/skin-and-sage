@@ -1,4 +1,4 @@
-import HeroPage from './components/home/page';
+import HeroPage from './home/page';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

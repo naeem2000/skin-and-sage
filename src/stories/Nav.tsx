@@ -1,9 +1,9 @@
 'use client';
 
-import { navIcons, navLinks } from '../app/components/functions/data';
+import { navIcons, navLinks } from '../app/functions/data';
 import { Fade as Hamburger } from 'hamburger-react';
-import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 

@@ -1,5 +1,5 @@
 'use client';
-import { footerLinks, socialLinks } from '@/app/components/functions/data';
+import { socialLinks, footerLinks } from '@/app/functions/data';
 import { MdOutlineKeyboardArrowUp } from 'react-icons/md';
 import { FaCcMastercard } from 'react-icons/fa';
 import { RiVisaLine } from 'react-icons/ri';
