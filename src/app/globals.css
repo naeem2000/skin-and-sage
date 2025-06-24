@@ -88,6 +88,7 @@ textarea {
 	letter-spacing: 0%;
 	width: 100%;
 	margin-top: 15px;
+	border-radius: 3px;
 }
 
 input[type='text']:focus,

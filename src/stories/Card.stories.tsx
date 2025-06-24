@@ -1,5 +1,5 @@
-import { connectRow } from '@/app/components/functions/data';
 import type { Meta, StoryObj } from '@storybook/nextjs';
+import { connectRow } from '@/app/functions/data';
 import Card from './Card';
 
 const meta = {

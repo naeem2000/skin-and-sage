@@ -1,15 +1,27 @@
 'use client';
 
-import { navIcons, navLinks } from '../app/components/functions/data';
+import { navIcons, navLinks } from '../app/functions/data';
 import { Fade as Hamburger } from 'hamburger-react';
+import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Nav() {
 	const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
 	const path = usePathname();
+
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			document.body.style.overflow = isNavOpen ? 'hidden' : 'auto';
+		}
+
+		return () => {
+			if (typeof window !== 'undefined') {
+				document.body.style.overflow = 'auto';
+			}
+		};
+	}, [isNavOpen]);
 
 	return (
 		<nav className='max-width absolute right-0 left-0 top-0 md:py-8 px-8 py-4'>
@@ -60,7 +72,7 @@ export default function Nav() {
 				</div>
 			</div>
 			<div
-				className={`fixed top-0 right-0 left-0 bottom-0 h-full w-full bg-gray-800 z-20 px-10 py-32 block md:hidden ${
+				className={`fixed top-0 right-0 left-0 bottom-0 h-screen w-full bg-gray-800 z-20 px-10 py-32 block md:hidden overflow-x-scroll ${
 					isNavOpen ? 'translate-x-0' : '-translate-x-[100%]'
 				} transition-all duration-300 ease-in-out`}
 			>

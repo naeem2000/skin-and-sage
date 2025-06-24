@@ -1,4 +1,4 @@
-import { categoryData, sliderData } from '@/app/components/functions/data';
+import { categoryData, sliderData } from '@/app/functions/data';
 import type { Meta, StoryObj } from '@storybook/nextjs';
 import Slider from './Slider';
 
