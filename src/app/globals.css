@@ -31,6 +31,8 @@
 	--hero-bg-mobile: url('/images/Hero-bg-mobile.png');
 	--hero-bg-desktop: url('/images/Hero-bg-desktop.png');
 	--moment-bg: url('/images/Moment.png');
+	--coming-soon-desktop: url('/images/coming-soon-desktop.png');
+	--coming-soon-mobile: url('/images/coming-soon-mobile.png');
 }
 
 * {

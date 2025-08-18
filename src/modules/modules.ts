@@ -17,7 +17,7 @@ export type ResponsiveSliderStyles = {
 	mobile: { breakpoint: { max: number; min: number }; items: number };
 };
 
-export type SliderSyles = {
+export type SliderStyles = {
 	swipeable: boolean;
 	draggable: boolean;
 	showDots: boolean;

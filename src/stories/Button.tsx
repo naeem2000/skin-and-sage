@@ -1,6 +1,9 @@
+import { isComingSoon } from '@/app/functions/constants';
+
 export interface ButtonProps {
 	label: string;
 	primary?: boolean;
+	disabled?: boolean;
 	className?: string;
 	onClick?: () => void;
 	size?: 'medium' | 'large';
@@ -16,8 +19,13 @@ export const Button = ({
 	className,
 	type,
 }: ButtonProps) => {
-	const baseStyles: string =
-		'flex items-center justify-center cursor-pointer font-normal text-lg leading-[100%] tracking-[5%] h-[53px] rounded-[4px] hover:opacity-[0.80] transition-all duration-0.5s';
+	const isShopNow = label.trim().toLowerCase() === 'shop now';
+
+	const isDisabled = isComingSoon && isShopNow;
+
+	const baseStyles: string = `flex items-center justify-center font-normal text-lg leading-[100%] tracking-[5%] h-[53px] rounded-[4px] ${
+		isDisabled ? 'opacity-[0.40]' : 'cursor-pointer hover:opacity-[0.80]'
+	} transition-all duration-0.5s`;
 	const mode: string = primary
 		? '!bg-[var(--green)] !text-white'
 		: '!bg-[var(--off-white)] !text-[var(--green)]';
@@ -27,6 +35,7 @@ export const Button = ({
 			className={`${baseStyles} ${className} ${mode} ${buttonSize}`}
 			onClick={onClick}
 			type={type}
+			disabled={isDisabled}
 		>
 			{label}
 		</button>

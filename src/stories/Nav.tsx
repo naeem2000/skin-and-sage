@@ -72,7 +72,7 @@ export default function Nav() {
 				</div>
 			</div>
 			<div
-				className={`fixed top-0 right-0 left-0 bottom-0 h-screen w-full bg-gray-800 z-20 px-10 py-32 block md:hidden overflow-x-scroll ${
+				className={`fixed top-0 right-0 left-0 bottom-0 h-screen w-full bg-gray-800 z-20 p-10 block md:hidden overflow-x-scroll ${
 					isNavOpen ? 'translate-x-0' : '-translate-x-[100%]'
 				} transition-all duration-300 ease-in-out`}
 			>
