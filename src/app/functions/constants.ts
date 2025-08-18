@@ -1,4 +1,6 @@
-import { ResponsiveSliderStyles, SliderSyles } from '@/modules/modules';
+import { ResponsiveSliderStyles, SliderStyles } from '@/modules/modules';
+
+export const isComingSoon: boolean = true;
 
 export const videoUrl: string = 'https://www.youtube.com/embed/9e5wY1rRnM4';
 
@@ -8,7 +10,7 @@ export const defaultResponsive: ResponsiveSliderStyles = {
 	mobile: { breakpoint: { max: 720, min: 0 }, items: 2 },
 };
 
-export const sliderStyles: SliderSyles = {
+export const sliderStyles: SliderStyles = {
 	swipeable: true,
 	draggable: true,
 	showDots: false,
