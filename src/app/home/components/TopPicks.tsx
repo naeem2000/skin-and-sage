@@ -10,7 +10,7 @@ export default function TopPicks() {
 		<section className='max-width'>
 			<div className='mt-5 md:mt-20 flex justify-center flex-col lg:flex-row'>
 				<div className='flex flex-col items-center justify-center md:items-start w-full lg:w-[20%] mr-14'>
-					<div className='flex flex-col'>
+					<div className='flex flex-col text-center md:text-left'>
 						<H2
 							label='TOP PICKS'
 							className='text-center mt-10 md:mt-0 md:text-left'
