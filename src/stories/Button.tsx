@@ -24,7 +24,9 @@ export const Button = ({
 	const isDisabled = isComingSoon && isShopNow;
 
 	const baseStyles: string = `flex items-center justify-center font-normal text-lg leading-[100%] tracking-[5%] h-[53px] rounded-[4px] ${
-		isDisabled ? 'opacity-[0.40]' : 'cursor-pointer hover:opacity-[0.80]'
+		isDisabled
+			? 'opacity-[0.40] cursor-not-allowed'
+			: 'cursor-pointer hover:opacity-[0.80]'
 	} transition-all duration-0.5s`;
 	const mode: string = primary
 		? '!bg-[var(--green)] !text-white'
