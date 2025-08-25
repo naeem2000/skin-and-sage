@@ -78,6 +78,13 @@
 	color: var(--dark-teal) !important;
 }
 
+@media screen and (max-width: 720px) {
+	.react-multiple-carousel__arrow {
+		min-width: 40px !important;
+		min-height: 40px !important;
+	}
+}
+
 input[type='text'],
 input[type='email'],
 textarea {

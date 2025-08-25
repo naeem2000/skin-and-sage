@@ -11,7 +11,10 @@ export default function TopPicks() {
 			<div className='mt-5 md:mt-20 flex justify-center flex-col lg:flex-row'>
 				<div className='flex flex-col items-center justify-center md:items-start w-full lg:w-[20%] mr-14'>
 					<div className='flex flex-col'>
-						<H2 label='TOP PICKS' className='text-center md:text-left' />
+						<H2
+							label='TOP PICKS'
+							className='text-center mt-10 md:mt-0 md:text-left'
+						/>
 						<H3 className='mt-3.5 ml-2.5' label='made for you' />
 					</div>
 					<p className='hidden md:block max-w-full lg:max-w-[220px] mt-10 font-normal text-lg leading-[100%] tracking-[5%]'>

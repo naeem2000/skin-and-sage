@@ -19,7 +19,7 @@ export default function Slider({ sliderData, categoryData }: SliderProps) {
 				{sliderData &&
 					sliderData.map((item, index) => {
 						return (
-							<div key={index} className='h-full w-[317px]'>
+							<div key={index} className='h-full w-[317px] mx-5'>
 								<div className='flex items-center justify-center flex-col'>
 									<Image
 										alt='product'
@@ -28,7 +28,7 @@ export default function Slider({ sliderData, categoryData }: SliderProps) {
 										src={item.image}
 									/>
 									<div className='self-start'>
-										<p className='font-normal text-base md:text-xl leading-[100%] tracking-[5%]'>
+										<p className='font-normal text-base md:text-xl leading-[100%] tracking-[5%] mt-5'>
 											{item.productName}
 										</p>
 										<p className='font-normal text-sm md:text-base leading-[100%] tracking-[5%] mt-3.5'>
@@ -42,7 +42,7 @@ export default function Slider({ sliderData, categoryData }: SliderProps) {
 				{categoryData &&
 					categoryData.map((item, index) => {
 						return (
-							<div key={index} className='h-full w-[317px]'>
+							<div key={index} className='h-full w-[317px] mx-5'>
 								<div className='flex items-center justify-center flex-col h-full w-full'>
 									<Image
 										alt='product'
@@ -51,13 +51,13 @@ export default function Slider({ sliderData, categoryData }: SliderProps) {
 										src={item.image}
 									/>
 									<div className='self-start'>
-										<p className='max-w-[210px] md:max-w-full font-normal text-lg md:text-xl leading-[100%] tracking-[5%]'>
+										<p className='max-w-[210px] mt-5 md:max-w-full font-normal text-lg md:text-xl leading-[100%] tracking-[5%]'>
 											{item.categoryName}
 										</p>
 										<p className='max-w-[210px] md:max-w-full mt-3.5 font-normal text-sm md:text-base leading-[100%] tracking-[5%]'>
 											{item.categoryDescription}
 										</p>
-										<p className='max-w-[210px] md:max-w-full mt-5 font-normal text-sm leading-[100%] tracking-[5%]'>
+										<p className='max-w-[150px] md:max-w-full mt-5 font-normal text-sm leading-[100%] tracking-[5%]'>
 											{item.categoryText}
 										</p>
 									</div>
